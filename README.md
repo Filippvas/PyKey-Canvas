@@ -1,3 +1,4 @@
+![icon](https://github.com/Filippvas/PyKey-Canvas/assets/99901949/056e8513-3bc9-4b45-92c3-4efa61423229)
  # PyKey Canvas
 
 ### Introduction
