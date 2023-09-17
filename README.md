@@ -10,21 +10,7 @@ PyKey Canvas is a simple command-line application that allows users to create an
 * Undo changes
 * Add lines to images
 
-### Installation
-
-To install PyKey Canvas, simply clone the repository and run the following command:
-
-```
-python setup.py install
-```
-
 ### Usage
-
-To start PyKey Canvas, simply run the following command:
-
-```
-pykeycanvas
-```
 
 The application will start with a blank canvas. You can use the following commands to create and edit your image:
 
@@ -48,4 +34,4 @@ The code for PyKey Canvas is relatively simple. The main file, `pykeycanvas.py`,
 ### Credits
 * Made by: Filippvas™
 * Made with: Visual Studio Code, Python 311
-* Other: Blackbox
+* Other: Blackbox, auto-py-to-exe
