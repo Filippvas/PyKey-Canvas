@@ -23,6 +23,8 @@ The application will start with a blank canvas. You can use the following comman
 * `P`: Proceed if the system stopped to prevent crashing
 * `Q`: Quit the application
 
+WARNING! You might get a notification from your antivitus program saying that PyKey Canvas is a threat. Ignore it!. PyKey Canvas has been tested and only has simple python code.
+
 ### Conclusion
 
 PyKey Canvas is a simple but powerful tool for creating and editing text-based images. It is easy to use and has a wide range of features. If you are looking for a simple way to create and edit text-based images, then PyKey Canvas is a great option.
