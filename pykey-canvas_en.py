@@ -1,5 +1,5 @@
-#Author: Filippvas™ (Philip Vasilakis)
-#Project Name: PyKey Canvas (CN n S)
+# Author: Filippvas™ (Philip Vasilakis) 2024
+# Project Name: PyKey Canvas (CN n S)
 
 import os
 import time
@@ -11,7 +11,9 @@ d = today.strftime("%Y-%m-%d")
 
 cs = list(string.ascii_uppercase)
 ns = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-ss = ["!", "@","#","$","%","^","&","*","(",")","'",'"',",",".","<",">","[","]","{","}","`","~",":",";","|","-","_","=","+"]
+ss = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "'", '"', ",", ".", "<", ">", "[", "]", "{", "}", "`", "~", ":",
+      ";", "|", "-", "_", "=", "+"]
+clist = clist = [" " for _ in range(100)]
 running = True
 cp = "|Cursor: I.Up K.Down J.Left L.Right | S.Show E.Enter|"
 pp = 1
@@ -58,7 +60,7 @@ c55 = " "
 
 def crash_error(ec):
     global running
-    
+
     os.system("cls")
     running = False
     print(" ___________________________")
@@ -75,6 +77,7 @@ def crash_error(ec):
         quit()
     else:
         crash_error("316")
+
 
 def tev():
     global t
@@ -95,6 +98,7 @@ def tev():
         e = " "
         crash_error("025")
 
+
 def eev():
     global e
     global t
@@ -110,23 +114,26 @@ def eev():
         e = " "
         crash_error("055")
 
+
 def pxev():
     global px
     os.system("cls")
     pxenv = int(input("ENTER VALUE> "))
-    if pxenv < 6 and pxenv >= 1:
+    if pxenv < 11 and pxenv >= 1:
         px = pxenv
     else:
         crash_error("254")
+
 
 def pyev():
     global py
     os.system("cls")
     pyenv = int(input("ENTER VALUE> "))
-    if pyenv < 6 and pyenv >= 1:
+    if pyenv < 11 and pyenv >= 1:
         py = pyenv
     else:
         crash_error("251")
+
 
 def pnev():
     global pn
@@ -143,12 +150,14 @@ def up():
     else:
         pass
 
+
 def down():
     global pp
     if pp <= 4:
         pp = pp + 2
     else:
         pass
+
 
 def left():
     global pp
@@ -157,6 +166,7 @@ def left():
     else:
         pass
 
+
 def right():
     global pp
     if pp == 1 or pp == 3 or pp == 5:
@@ -164,78 +174,39 @@ def right():
     else:
         pass
 
+
 def show():
     global running
     os.system("cls")
     running = False
-    print("| - - - - - |")
-    print(f"| {c11} {c21} {c31} {c41} {c51} |")
-    print(f"| {c12} {c22} {c32} {c42} {c52} |")
-    print(f"| {c13} {c23} {c33} {c43} {c53} |")
-    print(f"| {c14} {c24} {c34} {c44} {c54} |")
-    print(f"| {c15} {c25} {c35} {c45} {c55} |")
-    print(f"| - - - - - |")
+    print("| - - - - - - - - - - |")
+    # print(f"| {clist[0]} {clist[1]} {clist[2]} {clist[3]} {clist[4]} {clist[5]} {clist[6]} {clist[7]} {clist[8]} {clist[9]} |")
+    # print(f"| {clist[10]} {clist[11]} {clist[12]} {clist[13]} {clist[14]} {clist[15]} {clist[16]} {clist[17]} {clist[18]} {clist[19]} |")
+    # print(f"| {clist[20]} {clist[21]} {clist[22]} {clist[23]} {clist[24]} {clist[25]} {clist[26]} {clist[27]} {clist[28]} {clist[29]} |")
+    # print(f"| {clist[30]} {clist[31]} {clist[32]} {clist[33]} {clist[34]} {clist[35]} {clist[36]} {clist[37]} {clist[38]} {clist[39]} |")
+    # print(f"| {clist[40]} {clist[41]} {clist[42]} {clist[43]} {clist[44]} {clist[45]} {clist[46]} {clist[47]} {clist[48]} {clist[49]} |")
+    # print(f"| {clist[50]} {clist[51]} {clist[52]} {clist[53]} {clist[54]} {clist[55]} {clist[56]} {clist[57]} {clist[58]} {clist[59]} |")
+    # print(f"| {clist[60]} {clist[61]} {clist[62]} {clist[63]} {clist[64]} {clist[65]} {clist[66]} {clist[67]} {clist[68]} {clist[69]} |")
+    # print(f"| {clist[70]} {clist[71]} {clist[72]} {clist[73]} {clist[74]} {clist[75]} {clist[76]} {clist[77]} {clist[78]} {clist[79]} |")
+    # print(f"| {clist[80]} {clist[81]} {clist[82]} {clist[83]} {clist[84]} {clist[85]} {clist[86]} {clist[87]} {clist[88]} {clist[89]} |")
+    # print(f"| {clist[90]} {clist[91]} {clist[92]} {clist[93]} {clist[94]} {clist[95]} {clist[96]} {clist[97]} {clist[98]} {clist[99]} |")
+    for i in range(10):
+        print("|", " ".join(clist[i * 10:(i + 1) * 10]), "|")
+    print(f"| - - - - - - - - - - |")
     cmd = input("CMD> ")
     if cmd == "B":
         running = True
     else:
         crash_error("316")
 
+
 def show_done():
     pass
 
-def pt():
-    global c11, c12, c13, c14, c15, c21, c22, c23, c24, c25, c31, c32, c33, c34, c35, c41, c42, c43, c45, c51, c52, c53, c54, c55
-    if px == 1 and py == 1:
-        c11 = e
-    elif px == 1 and py == 2:
-        c12 = e
-    elif px == 1 and py == 3:
-        c13 = e
-    elif px == 1 and py == 4:
-        c14 = e
-    elif px == 1 and py == 5:
-        c15 = e
-    elif px == 2 and py == 1:
-        c21 = e
-    elif px == 2 and py == 2:
-        c22 = e
-    elif px == 2 and py == 3:
-        c23 = e
-    elif px == 2 and py == 4:
-        c24 = e
-    elif px == 2 and py == 5:
-        c25 = e
-    elif px == 3 and py == 1:
-        c31 = e
-    elif px == 3 and py == 2:
-        c32 = e
-    elif px == 3 and py == 3:
-        c33 = e
-    elif px == 3 and py == 4:
-        c34 = e
-    elif px == 3 and py == 5:
-        c35 = e
-    elif px == 4 and py == 1:
-        c41 = e
-    elif px == 4 and py == 2:
-        c42 = e
-    elif px == 4 and py == 3:
-        c43 = e
-    elif px == 4 and py == 4:
-        c44 = e
-    elif px == 4 and py == 5:
-        c45 = e
-    elif px == 5 and py == 1:
-        c51 = e
-    elif px == 5 and py == 2:
-        c52 = e
-    elif px == 5 and py == 3:
-        c53 = e
-    elif px == 5 and py == 4:
-        c54 = e
-    elif px == 5 and py == 5:
-        c55 = e
+
+def pt(px, py, e):
+    index = (py - 1) * 10 + (px - 1)
+    clist[index] = e
 
 
 while running == True:
@@ -322,7 +293,7 @@ while running == True:
     elif cmd == "S":
         show()
     elif cmd == "D":
-        pt()
+        pt(px, py, e)
     elif cmd == "Q":
         quit()
     else:
